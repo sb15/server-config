@@ -52,3 +52,13 @@ else
 fi
 
 printf "${NC}\n";
+
+
+printf "datadog-agent: ";
+if ps aux | grep "[d]d-agent" > /dev/null; then
+  printf "${GREEN_COLOR}running"
+else
+  printf "${RED_COLOR}stopped"
+fi
+
+printf "${NC}\n";
