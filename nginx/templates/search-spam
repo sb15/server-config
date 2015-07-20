@@ -1,0 +1,4 @@
+if ( $http_referer ~* (simple-share-buttons\.com|forum\.topic\d+\.darodar\.com|forum\d+\.smailik\.org|site\d+\.simple-share-buttons\.com|semalt\.semalt\.com|firefox/addon/ilovevitaly|googlsucks\.com) )
+{
+    return 404;
+}

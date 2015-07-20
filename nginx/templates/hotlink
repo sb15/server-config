@@ -1,0 +1,4 @@
+valid_referers none blocked $allowed_hosts_string;
+if ($invalid_referer) {
+    return 403;
+}

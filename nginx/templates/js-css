@@ -1,0 +1,2 @@
+rewrite ^(.+?)\.d\d+\.js\??.*?$ $1.js last;
+rewrite ^(.+?)\.d\d+\.css\??.*?$ $1.css last;
