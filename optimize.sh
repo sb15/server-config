@@ -10,3 +10,4 @@ cat /proc/sys/vm/swappiness - 10
 
 # cat /proc/sys/fs/file-max
 # sysctl -w fs.file-max=524288
+# update-alternatives --config editor

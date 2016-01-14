@@ -44,34 +44,15 @@ fi
 printf "${NC}\n";
 
 
-printf "exim: ";
-if ps aux | grep "[e]xim4" > /dev/null; then
-  printf "${GREEN_COLOR}running"
-else
-  printf "${RED_COLOR}stopped"
-fi
+#printf "sentry: ";
+#if ps aux | grep "[S]entry" > /dev/null; then
+#  printf "${GREEN_COLOR}running"
+#else
+#  printf "${RED_COLOR}stopped"
+#fi
 
-printf "${NC}\n";
+#printf "${NC}\n";
 
-
-printf "sentry: ";
-if ps aux | grep "[S]entry" > /dev/null; then
-  printf "${GREEN_COLOR}running"
-else
-  printf "${RED_COLOR}stopped"
-fi
-
-printf "${NC}\n";
-
-
-printf "redis: ";
-if ps aux | grep "[r]edis" > /dev/null; then
-  printf "${GREEN_COLOR}running"
-else
-  printf "${RED_COLOR}stopped"
-fi
-
-printf "${NC}\n";
 
 printf "datadog-agent: ";
 if ps aux | grep "[d]d-agent" > /dev/null; then
@@ -80,4 +61,4 @@ else
   printf "${RED_COLOR}stopped"
 fi
 
-printf "${NC}";
+printf "${NC}\n";

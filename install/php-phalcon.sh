@@ -1,4 +1,5 @@
 #!/bin/bash
+# move to /usr/src/
 
 apt-get install \
 gcc \

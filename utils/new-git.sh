@@ -4,14 +4,15 @@ REPOS_ROOT=/repos/gits/
 PROJECTS_ROOT=/srv/domains/
 
 REPO=$1
+PROJECT=$2
 
 if [[ -z "$REPO" ]]; then
-  echo "project name not defined"
+  echo "usage repoName projectPath"
   exit
 fi
 
 REPO_DIR=$REPOS_ROOT$REPO
-PROJECT_DIR=$PROJECTS_ROOT$REPO
+PROJECT_DIR=$PROJECTS_ROOT$PROJECT
 
 mkdir -p $REPO_DIR
 mkdir -p $PROJECT_DIR
@@ -26,6 +27,7 @@ echo "cd "$PROJECT_DIR" || exit" >> $REPO_DIR/hooks/post-update
 echo 'unset GIT_DIR' >> $REPO_DIR/hooks/post-update
 echo 'git pull' >> $REPO_DIR/hooks/post-update
 echo 'php /bin/composer.phar update -o' >> $REPO_DIR/hooks/post-update
+echo 'wget -O /dev/null -o /dev/null http://localhost/opcache-clean/'
 echo 'echo done' >> $REPO_DIR/hooks/post-update
 
 # echo -e

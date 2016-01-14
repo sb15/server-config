@@ -1,5 +1,7 @@
 #!/bin/bash
 
+apt-get install s3cmd
+
 apt-get install python-setuptools
 
 mkdir -p /tmp/s3cmd-build
