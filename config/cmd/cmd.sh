@@ -21,7 +21,7 @@ WHITE_COLOR='\033[0;97m'
 
 # 101 - nginx restart 201 php-fpm restart
 
-# check exist
+## check exist
 # check run
 # nginx (version) - running     nginx - stopped    nginx - not installed
 # 
